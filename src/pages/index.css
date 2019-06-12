@@ -1,7 +1,7 @@
 
 .normal {
   font-family: Georgia, sans-serif;
-  margin-top: 4em;
+  margin-top: 40px;
   text-align: center;
 }
 
@@ -12,10 +12,11 @@
 }
 
 .list {
-  font-size: 1.2em;
-  margin-top: 1.8em;
+  font-size: 12px;
+  margin-top: 18px;
+  padding: 0;
   list-style: none;
-  line-height: 1.5em;
+  line-height: 15px;
 }
 
 .list code {

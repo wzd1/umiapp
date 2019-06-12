@@ -2,6 +2,7 @@ import React, { Component,} from 'react';
 import { connect } from 'dva';
 import Link from 'umi/link';
 import styles from './index.css';
+import _ from 'lodash';
 
 @connect(({ test_models, loading }) => ({
   test_models,
@@ -17,6 +18,7 @@ class Index extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     this.props.dispatch({
         type: 'test_models/fetch',
         payload: {

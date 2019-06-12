@@ -136,6 +136,16 @@ export default {
 
 如果想忽略 mock 文件夹下的部分文件，参考 [mock.exclude](https://umijs.org/zh/config/#mock-exclude) 配置。
 
+## Use umi with dva
+[umi + dva完成用户管理的 CURD 应用](https://github.com/sorrycc/blog/issues/62)
+[特性](https://umijs.org/zh/guide/with-dva.html#%E7%89%B9%E6%80%A7)
+- 按目录约定注册 model，无需手动 app.model
+- 文件名即 namespace，可以省去 model 导出的 namespace key
+- 无需手写 router.js，交给 umi 处理，支持 model 和 component 的按需加载
+- 内置 query-string 处理，无需再手动解码和编码
+- 内置 dva-loading 和 dva-immer，其中 dva-immer 需通过配置开启
+- 开箱即用，无需安装额外依赖，比如 dva、dva-loading、dva-immer、path-to-regexp、object-assign、react、react-dom 等
+
 ## src
 约定 src 为源码目录，如果不存在 src 目录，则当前目录会被作为源码目录。
 

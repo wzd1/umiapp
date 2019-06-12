@@ -1,8 +1,14 @@
 import React, { Component,} from 'react';
+import { connect } from 'dva';
 import Link from 'umi/link';
 import styles from './index.css';
 
-export default class Index extends Component {
+@connect(({ test_models, loading }) => ({
+  test_models,
+  loading: loading.effects['test_models/fetch'],
+}))
+
+class Index extends Component {
   constructor(props) {
       super(props);
       this.state={
@@ -11,7 +17,12 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
-
+    this.props.dispatch({
+        type: 'test_models/fetch',
+        payload: {
+            page_size: 1,
+        }
+    });
   }
 
   render() {
@@ -32,3 +43,5 @@ export default class Index extends Component {
     )
   }
 }
+
+export default Index;

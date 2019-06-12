@@ -64,7 +64,7 @@ $ yarn start
 执行命令:
 
 ```bash
-$ umi build
+$ yarn build
 ```
 构建产物默认生成到 ./dist 下
 ```
